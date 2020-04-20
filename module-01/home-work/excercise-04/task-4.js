@@ -14,13 +14,12 @@ if (quantityGoods === null) {
   alert('Отменено пользователем!');
 } else {
   totalPrice = quantityGoods * pricePerDroid;
-}
-
-if (credits >= totalPrice) {
-  credits -= totalPrice;
-  alert(
-    `Вы купили ${quantityGoods} дроидов, на счету осталось ${credits} кредитов.`,
-  );
-} else {
-  alert('Недостаточно средств на счету!');
+  if (credits >= totalPrice) {
+    credits -= totalPrice;
+    alert(
+      `Вы купили ${quantityGoods} дроидов, на счету осталось ${credits} кредитов.`,
+    );
+  } else {
+    alert('Недостаточно средств на счету!');
+  }
 }
