@@ -8,12 +8,12 @@ const quantityGoods = prompt(
   'Укажите колличество дроидов, которое желаете приобрести',
 );
 
-let totalPrice;
+// let totalPrice;
 
 if (quantityGoods === null) {
   alert('Отменено пользователем!');
 } else {
-  totalPrice = quantityGoods * pricePerDroid;
+  const totalPrice = quantityGoods * pricePerDroid;
   if (credits >= totalPrice) {
     credits -= totalPrice;
     alert(
